@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-ghannam | Online Store</title>
+
+    <link rel="icon" href="imgs/icon.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/login_regs.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <a href="#" class="logo"><img src="imgs/el-ghannam-store-dark1.png" alt=""></a>
+
+                <form action="" class="search-box">
+                    <div class="select-box">
+                        <select id="category" name="category">
+                            <option value="All Categories">All Categories</option>
+                            <option value="Electronics & Digita">Electronics & Digita</option>
+                            <option value="Phones & Tablets">Phones & Tablets</option>
+                            <option value="Fashion & Clothing">Fashion & Clothing</option>
+                            <option value="Televisions & Monitors">Televisions & Monitors</option>
+                            <option value="Jewelry & Watches">Jewelry & Watches</option>
+                            <option value="Washing Machine">Washing Machine</option>
+                            <option value="Toys & Hobbies">Toys & Hobbies</option>
+
+                        </select>
+                    </div>
+
+                    <input type="text" name="search" id="search" placeholder="search for product" required>
+
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+
+                </form>
+
+                <div class="header-icons">
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                            <span class="count count-favourite">0</span>
+                        </a>
+                    </div>
+
+                    <div onclick="OpenCloseCart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="count count-item-header">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="bottom-header">
+            <div class="container">
+                <nav class="nav">
+
+                    <span onclick="OpenMenu()" class="open-menu"><i class="fa-solid fa-bars"></i></span>
+
+                    <div class="category-nav">
+                        <div onclick="OpenCategoryList()" class="category-btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Browse Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+
+
+                        <div class="category-nav-list">
+                            <a href="#">Top 10 Offers</a>
+                            <a href="#">Electronics & Digita</a>
+                            <a href="#">Phones & Tablet</a>
+                            <a href="#">Fashion & Clothings</a>
+                            <a href="#">Television & Monitor</a>
+                            <a href="#">Jewlery & Watches</a>
+                            <a href="#">Toys & Hobbies</a>
+                        </div>
+
+
+                    </div>
+
+
+                    <ul class="nav-links">
+
+                        <span onclick="OpenMenu()" class="close-menu"><i class="fa-regular fa-circle-xmark"></i></span>
+
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Accesories</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="register btns">
+                    <a href="login.html" class="btn">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- start of cart -->
+    <div class="cart">
+        <div class="top-cart">
+            <h3>Cart Items : <span class="count-cart-items">0</span></h3>
+            <span onclick="OpenCloseCart()" class="close-cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+
+        <div class="items-in-cart" id="cart-items">
+
+
+
+        </div>
+
+
+        <div class="bottom-cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price-cart-total"> $0</p>
+            </div>
+
+            <div class="button-cart">
+                <a href="#" class="btn-cart btn ">Checkout</a>
+                <span onclick="OpenCloseCart()" class="btn-cart trans-bg btn">Shop More</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- end of cart -->
+
+        <!-- start of signup -->
+        <section class="signin sec-form">
+            <div class="form-container">
+                <p class="title">Welcome back</p>
+                <form action="" class="form">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="re-password">
+        
+                    <button class="form-btn">Sign Up</button>
+                    
+                </form>
+                <p class="signup-label">
+                    have an account <a href="#" class="signup-link">Login</a>
+                </p>
+                
+                <div class="buttons-container">
+                    <div class="apple-login-button">
+                        <i class="fa-brands fa-apple"></i>
+                        <span>Sign Up with Apple</span>
+                    </div>
+    
+                    <div class="google-login-button">
+                        <i class="fa-brands fa-google"></i>
+                        <span>Sign Up with Google</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    
+        <!-- end of signup -->
+
+
+
+    <!-- start of footer -->
+    <footer>
+        <div class="container">
+            <div class="big-row">
+                <img class="logo-footer" src="imgs/el-ghannam-store-white1.png" alt="">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, laboriosam?</p>
+
+                <div class="icons-footer">
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4> Find It Fast</h4>
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Laptops & Computers</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> TV & Audio</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Appliances</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4> Quick Links</h4>
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Purchase History</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4> Service Us </h4>
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Support Center</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Terms & Condition</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Privacy Policy </a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Help </a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="bottom-footer">
+            <div class="container">
+                <p>&copy; <span>El-Ghannam Store</span> All Rights Reserved .</p>
+
+                <div class="payment-img">
+                    <img src="imgs/payment_method.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- end of footer -->
+
+    <script src="js/main.js"></script>
+
+
+</body>
+
+</html>
