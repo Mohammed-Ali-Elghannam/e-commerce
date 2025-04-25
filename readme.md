@@ -1,7 +1,7 @@
 # Ecommerce Website 
 
 ## Overview
-Ecommerce Website is a responsive and feature-rich online store designed to provide a seamless shopping experience. It includes functionalities like product browsing, shopping cart management, user authentication, and secure checkout.
+Ecommerce Website is a responsive and feature-rich online store(frontend) designed to provide a seamless shopping experience. It includes functionalities like product browsing, shopping cart management, user authentication, and secure checkout.
 
 ## Features
 - **Responsive Design**: Optimized for all devices, including desktops, tablets, and mobile phones.
